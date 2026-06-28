@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poema</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <a href="index.html" style="margin:20px; display:inline-block; color: var(--accent);">
+    ← voltar
+  </a>
+
+  <main>
+    <section class="poema" id="conteudo"></section>
+  </main>
+
+  <script>
+    const poemas = {
+      "sorriso-silencio": {
+        titulo: "Quando o sorriso virou silêncio",
+        texto: `Foi quando um sorriso em meu rosto tornou-se lágrimas
+que percebi que a tristeza já não era passageira.
+
+Ela ficou.
+Fez morada.
+
+E eu aprendi a conviver com o que antes eu chamava de fase.`
+      },
+
+      "cicatrizes": {
+        titulo: "Cicatrizes",
+        texto: `Cicatrizes não são apenas marcas na pele,
+são histórias que o tempo não conseguiu apagar.
+
+Algumas doem em silêncio,
+outras gritam dentro de mim.`
+      }
+    };
+
+    const id = new URLSearchParams(window.location.search).get("id");
+
+    const poema = poemas[id];
+    const container = document.getElementById("conteudo");
+
+    if (poema) {
+      container.innerHTML = `
+        <h2>${poema.titulo}</h2>
+        <p>${poema.texto}</p>
+      `;
+    } else {
+      container.innerHTML = "<p>Poema não encontrado.</p>";
+    }
+  </script>
+
+</body>
+</html>

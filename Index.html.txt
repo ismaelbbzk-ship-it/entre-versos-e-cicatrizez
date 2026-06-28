@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Entre Cicatrizes e Versos</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+  <button id="toggleTema">🌙 Tema</button>
+
+  <header>
+    <h1>Entre Cicatrizes e Versos</h1>
+    <p class="subtitulo">poemas de um coração em reconstrução</p>
+  </header>
+
+  <main>
+    <section class="poemas" id="poemas-container"></section>
+  </main>
+
+  <footer>
+    <p>feito com dor, amor e palavras.</p>
+  </footer>
+
+  <!-- música opcional -->
+  <audio id="musica" loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_d0b2b0f2b7.mp3?filename=soft-piano-ambient-110397.mp3">
+  </audio>
+
+  <button id="playMusica">🎧 música</button>
+
+  <script src="poems.js"></script>
+</body>
+</html>
